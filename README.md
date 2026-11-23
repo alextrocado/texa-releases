@@ -3,6 +3,8 @@
 **O processador de texto que fala LaTeX.** Escreve como no Word e obtém LaTeX limpo. Ou abre um
 `.tex` e edita-o como um documento normal. Funciona em macOS (Apple silicon) e Windows.
 
+![A página, o código LaTeX e o PDF compilado lado a lado](imagens/texa-pdf-ao-lado.png)
+
 [⬇ Descarregar a versão mais recente](https://github.com/alextrocado/texa-releases/releases/latest)
 
 - **macOS:** abre o `.dmg` e arrasta o TEXA para Aplicações.
@@ -52,12 +54,23 @@ O domínio de $f(x)=\sqrt{x-2}$ é $[2,+\infty[$.
 abre com o título, a secção e as duas equações editáveis. Gravado outra vez em LaTeX, mantém a
 classe, as opções, `\maketitle` e a equação numerada.
 
-### 3. Equações com o teclado (atalhos do MathType)
+### 3. O PDF ao lado da página
+
+No separador **LaTeX**, carrega em **Pré-visualização PDF**: o documento compilado aparece ao lado
+da página e atualiza-se sozinho pouco depois de cada alteração. Continuas a escrever na página,
+como no Word.
+
+- O texto que selecionas na página (ou no Painel LaTeX) fica destacado no PDF.
+- Um clique no PDF leva o cursor a esse sítio da página.
+- **Cmd+T** (Ctrl+T no Windows) compila quando quiseres.
+
+### 4. Equações com o teclado (atalhos do MathType)
 
 | Teclas (macOS) | Faz |
 |---|---|
 | Cmd+E | Nova equação |
 | Cmd+Shift+E | Equação no meio do texto |
+| Cmd+T | Compilar o LaTeX |
 | Ctrl+F | Fração |
 | Ctrl+H / Ctrl+L | Expoente / índice |
 | Ctrl+R | Raiz quadrada |
@@ -72,19 +85,35 @@ mudados: clica com o botão direito num símbolo da Paleta de Equações › **D
 Também podes escrever `$x^2+1$` no texto: com a opção **Escrever $…$ para equações** ligada (separador
 LaTeX), passa a uma equação.
 
-### 4. Modelos LaTeX prontos
+### 5. 32 modelos LaTeX prontos
 
-**LaTeX › Modelos LaTeX** abre 16 modelos em português:
+Em **Ficheiro › Novo**, os modelos aparecem em duas secções, **Documentos Word** e **Documentos
+LaTeX** (também em **LaTeX › Modelos LaTeX**). Todos em português:
 
 - **Avaliação:** teste (classe `exam`), teste ao estilo do exame nacional, escolha múltipla, mini-teste;
-- **Fichas:** ficha de trabalho, ficha com resoluções, ficha (classe `exam`), formulário;
-- **Escola:** plano de aula;
-- **Académicos:** artigo, relatório, relatório de laboratório, tese, livro;
+- **Fichas e aulas:** ficha de trabalho, ficha com resoluções, ficha (classe `exam`), formulário,
+  plano de aula, apontamentos de aula;
+- **Artigos:** artigo, artigo de investigação, artigo de revisão, artigo de matemática (teoremas e
+  demonstrações), artigo científico em duas colunas, artigo para conferência, comunicação curta,
+  resumo alargado, ensaio académico, estudo de caso, recensão crítica;
+- **Trabalhos longos:** relatório, relatório técnico, relatório de laboratório, tese, dissertação de
+  mestrado, livro, proposta de projeto de investigação;
+- **Apresentar:** apresentação Beamer, poster científico;
 - **Outros:** carta formal, currículo.
 
 Escolhe um, escreve por cima e compila.
 
-### 5. O aspeto do PDF
+![Os modelos LaTeX em Ficheiro › Novo](imagens/texa-modelos.png)
+
+### 6. Teoremas e demonstrações
+
+Os teoremas, definições, lemas, corolários e demonstrações do `amsthm` abrem como parágrafos
+próprios («Teorema 1.2 (Pitágoras).», «Demonstração. … □») e voltam a ser
+`\begin{teorema}…\end{teorema}`, com a numeração por secção e as referências `\ref`.
+
+![Um artigo de matemática compilado](imagens/texa-artigo-matematica.png)
+
+### 7. O aspeto do PDF
 
 No separador **LaTeX**, em **Aspeto**:
 
@@ -92,7 +121,7 @@ No separador **LaTeX**, em **Aspeto**:
   letra Computer Modern, secções numeradas e `\maketitle`;
 - **Igual ao ecrã**: o PDF imita a página do documento (letra, margens, cores e espaçamentos).
 
-### 6. PDF para documento editável
+### 8. PDF para documento editável
 
 Arrasta um PDF para a janela: o texto, os títulos e as imagens passam a um documento que podes
 editar e gravar em `.docx` ou `.tex`.
